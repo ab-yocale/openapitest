@@ -1,0 +1,42 @@
+openapi: 3.0.0
+x-stoplight:
+  id: rdrkjzyaihr55
+tags:                                   ###!!!
+  - name: tag1                          ###!!!
+
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: 'https://virtserver.swaggerhub.com/Yocale-Network/manifest-api/1.0.0'
+  - description: Yocale Production
+    url: 'https://www.yocale.com/manifest/v1'
+info:
+  version: 1.0.0
+  title: Manifest API
+  description: The API for the Yocale public projects
+  contact:                          ###!!!
+    name: Alex                      ###!!!
+    email: sdfsdf@sdfsdf.com        ###!!!
+    url: https://sdfdfsfd           ###!!!
+  license:                          ###!!!
+    url: https://apache.org         ###!!!
+    name: apache                    ###!!!
+paths:
+  '/businesses/{businessKey}':
+    get:
+      tags:                         ###!!! spectral
+        - 'tag1'                    ###!!! spectral
+      operationId: getBusiness
+      description: Get information about specific business by its URL key.
+      parameters:
+        - $ref: 'stoplight-bus-comp.yaml#/components/parameters/businessKey'
+      responses:
+        '200':
+          description: A list of users
+          content:
+            text/plain:
+              schema:
+                type: string
+      x-stoplight:
+        id: 1r1iumh3e2bk8
+components:
+  schemas: {}
